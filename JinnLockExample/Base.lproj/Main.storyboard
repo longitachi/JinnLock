@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PI7-d0-HWa">
+                                <rect key="frame" x="270" y="148" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="JXu-fI-tP6"/>
+                                    <constraint firstAttribute="height" constant="30" id="QJo-Ac-O3V"/>
+                                </constraints>
+                                <state key="normal" title="创建密码"/>
+                                <connections>
+                                    <action selector="create:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YOg-bS-2bJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJW-bj-4vt">
+                                <rect key="frame" x="270" y="208" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Wq9-wO-BXj"/>
+                                    <constraint firstAttribute="height" constant="30" id="cBZ-d8-uWI"/>
+                                </constraints>
+                                <state key="normal" title="修改密码"/>
+                                <connections>
+                                    <action selector="modify:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rXF-32-ylg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbw-7n-t8Q">
+                                <rect key="frame" x="270" y="270" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="FDk-dA-Cek"/>
+                                    <constraint firstAttribute="height" constant="30" id="iSp-ld-Ebw"/>
+                                </constraints>
+                                <state key="normal" title="验证密码"/>
+                                <connections>
+                                    <action selector="verify:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NKi-BQ-Vxl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SGY-Vg-mH3">
+                                <rect key="frame" x="270" y="340" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="DNg-nB-t7l"/>
+                                    <constraint firstAttribute="width" constant="100" id="tSm-Tq-RzQ"/>
+                                </constraints>
+                                <state key="normal" title="移除密码"/>
+                                <connections>
+                                    <action selector="remove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wrA-I3-JEU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PI7-d0-HWa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1vZ-rr-uc6"/>
+                            <constraint firstItem="Bbw-7n-t8Q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hva-p6-Sn0"/>
+                            <constraint firstItem="zJW-bj-4vt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iqO-q1-bkq"/>
+                            <constraint firstItem="zJW-bj-4vt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-30" id="o1m-4Z-x0k"/>
+                            <constraint firstItem="SGY-Vg-mH3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oBh-I2-OE6"/>
+                            <constraint firstItem="SGY-Vg-mH3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="90" id="pY8-9P-ct5"/>
+                            <constraint firstItem="Bbw-7n-t8Q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="30" id="sL6-Uk-oo8"/>
+                            <constraint firstItem="PI7-d0-HWa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-90" id="w4z-Je-x9h"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
