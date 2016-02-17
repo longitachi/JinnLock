@@ -23,7 +23,8 @@
 - (IBAction)create:(id)sender
 {
     JinnLockViewController *lockViewController = [[JinnLockViewController alloc] initWithType:JinnLockTypeCreate
-                                                                                   appearMode:JinnLockAppearModePresent];
+                                                                                   appearMode:JinnLockAppearModePresent
+                                                 minCount:4];
     [lockViewController setDelegate:self];
     [self presentViewController:lockViewController animated:YES completion:nil];
 }
@@ -31,7 +32,8 @@
 - (IBAction)modify:(id)sender
 {
     JinnLockViewController *lockViewController = [[JinnLockViewController alloc] initWithType:JinnLockTypeModify
-                                                                                   appearMode:JinnLockAppearModePresent];
+                                                                                   appearMode:JinnLockAppearModePresent
+                                                 minCount:4];
     [lockViewController setDelegate:self];
     [self presentViewController:lockViewController animated:YES completion:nil];
 }
@@ -39,7 +41,8 @@
 - (IBAction)verify:(id)sender
 {
     JinnLockViewController *lockViewController = [[JinnLockViewController alloc] initWithType:JinnLockTypeVerify
-                                                                                   appearMode:JinnLockAppearModePresent];
+                                                                                   appearMode:JinnLockAppearModePresent
+                                                 minCount:0];
     [lockViewController setDelegate:self];
     [self presentViewController:lockViewController animated:YES completion:nil];
 }
@@ -47,7 +50,8 @@
 - (IBAction)remove:(id)sender
 {
     JinnLockViewController *lockViewController = [[JinnLockViewController alloc] initWithType:JinnLockTypeRemove
-                                                                                   appearMode:JinnLockAppearModePresent];
+                                                                                   appearMode:JinnLockAppearModePresent
+                                                 minCount:0];
     [lockViewController setDelegate:self];
     [self presentViewController:lockViewController animated:YES completion:nil];
 }

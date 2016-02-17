@@ -52,7 +52,7 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
 @implementation JinnLockViewController
 
 - (instancetype)initWithType:(JinnLockType)type
-                  appearMode:(JinnLockAppearMode)appearMode
+                  appearMode:(JinnLockAppearMode)appearMode minCount:(NSUInteger)minCount
 {
     self = [super init];
     
@@ -60,9 +60,19 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
     {
         self.type = type;
         self.appearMode = appearMode;
+        self.minCount = minCount;
     }
     
     return self;
+}
+
+- (void)setMinCount:(NSUInteger)minCount
+{
+    if (self.type == JinnLockTypeVerify || self.type == JinnLockTypeRemove) {
+        _minCount = 0;
+    } else {
+        _minCount = minCount;
+    }
 }
 
 - (void)viewDidLoad
@@ -120,6 +130,7 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
     _indicator = [[JinnLockIndicator alloc] init];
     
     _sudoko = [[JinnLockSudoko alloc] init];
+    _sudoko.minCount = self.minCount;
     _sudoko.delegate = self;
     
     _resetButton = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -514,4 +525,6 @@ typedef NS_ENUM(NSInteger, JinnLockStep)
     [_indicator showPassword:password];
 }
 
-@end
+@end// 版权属于原作者
+// http://code4app.com (cn) http://code4app.net (en)
+// 发布代码于最专业的源码分享网站: Code4App.com

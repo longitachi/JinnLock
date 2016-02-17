@@ -88,16 +88,7 @@
     
     [self setNeedsDisplay];
     
-    if (!_timer)
-    {
-        [_timer invalidate];
-    }
-
-    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0
-                                              target:self
-                                            selector:@selector(reset)
-                                            userInfo:nil
-                                             repeats:NO];
+    [self performSelector:@selector(reset) withObject:nil afterDelay:1.0];
 }
 
 - (void)reset
@@ -178,6 +169,13 @@
 {
     _drawing = NO;
     
+    if (_selectedCircleArray.count < self.minCount) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"提示" message:[NSString stringWithFormat:@"请至少设置%zd位以上密码", self.minCount] delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+        [alert show];
+        [self reset];
+        return;
+    }
+    
     NSString *password = @"";
     for (int i = 0; i < _selectedCircleArray.count; i++)
     {
@@ -226,4 +224,6 @@
     }
 }
 
-@end
+@end// 版权属于原作者
+// http://code4app.com (cn) http://code4app.net (en)
+// 发布代码于最专业的源码分享网站: Code4App.com

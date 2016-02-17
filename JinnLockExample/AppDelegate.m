@@ -41,7 +41,8 @@
     if ([JinnLockPassword isEncrypted] && (self.window.rootViewController.presentedViewController == nil))
     {
         JinnLockViewController *lockViewController = [[JinnLockViewController alloc] initWithType:JinnLockTypeVerify
-                                                                                       appearMode:JinnLockAppearModePresent];
+                                                                                       appearMode:JinnLockAppearModePresent
+                                                 minCount:0];
         [self.window.rootViewController presentViewController:lockViewController animated:NO completion:nil];
     }
 }
